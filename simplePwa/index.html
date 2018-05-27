@@ -1,14 +1,62 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+
+  <meta name="apple-mobile-web-app-title" content="index">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+  <title>운전습관</title>
+  <meta property="og:title" content="운전습관">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="운전습관">
+  <meta property="fb:app_id" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="운전습관">
 </head>
 <body>
-  test
+  <div class="wrap">
+    <div class="top">
+      <img src="images/img01_1.jpg" alt="">
+      
+      <img src="images/popup_ani.gif" alt="">
+    </div>
+    <div class="content">
+      <div class="btnWrap">
+        <div class="tryBtn">
+          <a href="http://www.tmap.co.kr/tmap2/mobile/tmap.jsp?scheme=tmap&host=nugu-listening"><img src="images/btn_ani.gif" alt=""></a>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <ul class="sns">
+          <li><a href="javascript:;" class="kakao" onClick="ga('send', 'event', eventLabel+'_sns', 'KAKAO','KAKAO')"><img src="images/kakao.png" alt=""></a></li>
+          <li><a href="javascript:;" target="_blank" class="facebook" onClick="ga('send', 'event', eventLabel+'_sns', 'FACEBOOK','FACEBOOK')"><img src="images/facebook.png" alt=""></a></li>
+          <li><a href="http://line.me/R/msg/text/http://event.tmap.co.krindex.html" target="_blank" class="line" onClick="ga('send', 'event', eventLabel+'_sns', 'LINE','LINE')"><img src="images/line.png" alt=""></a></li>
+          <li><a href="javascript:;" target="_blank" class="sms" onClick="ga('send', 'event', eventLabel+'_sns', 'SMS','SMS')"><img src="images/sms.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="footer">
+      <p>
+        <strong>SK텔레콤㈜</strong>&nbsp;&nbsp;서울시 중구 을지로65(을지로2가) SK T-타워<br>
+        고객센터 : (SK텔레콤 가입자, 휴대폰) 국번없이 <strong>1553</strong>(무료), <br>(SK텔레콤 외 가입자, 유선) <strong>1600-5110</strong>(유료)
+        <span class="copyright">COPYRIGHT SK TELECOM CO., LTD. ALL RIGHTS RESERVED.</span>
+      </p>
+    </div>
+    <div class="popupWrap">
+      <div class="popup">
+        <a href="javascript:;" class="popClose"></a>
+        <img src="images/andImg.jpg" alt="">
+        <a href="http://www.tmap.co.kr/tmap2/mobile/tmap.jsp?scheme=tmap&host=nugu-listening" class="submit"></a>
+      </div>
+    </div>
+  </div>  
 </body>
-
+<script src="./dist/css.bundle.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
   // Initialize Firebase

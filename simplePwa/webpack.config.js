@@ -7,7 +7,7 @@ var glob = require('glob');
 module.exports = {  
     context: __dirname + '/', // 모듈 파일 폴더
     entry: { // 엔트리 파일 목록
-        //app: './js/index.js',
+        app: glob.sync('./js/*.js'),
         css:glob.sync('./css/*.css'),
         
     },

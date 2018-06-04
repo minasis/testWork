@@ -11,8 +11,10 @@ $(function(){
 	var now = new Date();
 	var targetDate = new Date(2018,0,1);
 
+    console.log(targetDate)
 	if(now.getTime() >= targetDate.getTime()){		
-		var target = $(".top img").eq(0)
+        var target = $(".top img").eq(0)
+        console.log("test")
 		target.attr("src", String(target.attr("src")).replace("01_1", "01_2"));
 	}
 

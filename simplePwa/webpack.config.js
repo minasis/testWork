@@ -1,18 +1,15 @@
-
-var path = require('path')
-
+var webpack = require('webpack')
+var path = require('path');
 var glob = require('glob');
-//var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {  
     context: __dirname + '/', // 모듈 파일 폴더
     entry: { // 엔트리 파일 목록
-        app: glob.sync('./js/*.js'),
-        css:glob.sync('./css/*.css'),
-        
+        app: ['./js/common.js', './js/js_kakao.js'],
+        css:'./css/index.css',
     },
     output: {
-        path: __dirname + '/dist', // 번들 파일 폴더
+        path: path.resolve(__dirname + '/dist'), // 번들 파일 폴더
         publicPath: './dist/',
         filename: '[name].bundle.js' // 번들 파일 이름 규칙
     },
@@ -31,5 +28,11 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
 }

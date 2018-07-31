@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var path = require('path');
 var glob = require('glob');
+var workboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {  
     context: __dirname + '/', // 모듈 파일 폴더
@@ -33,6 +34,11 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
+        }),
+        new workboxPlugin.GenerateSW({
+            swDest: 'sw.js',
+            clientsClaim: true,
+            skipWaiting: true,
+          })
     ]
 }

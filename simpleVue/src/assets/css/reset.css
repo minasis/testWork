@@ -1,0 +1,25 @@
+@import "fonts.css";
+
+*{margin:0; padding:0; font-size: 10px; vertical-align: top; border:0; text-decoration: none;
+    font-family:'AppleSDGothicNeo-Regular', 'nanumBarunGothic-regular'; line-height: 120%;-webkit-tap-highlight-color: rgba(0,0,0,0); box-sizing:border-box; vertical-align: top; color:#000;letter-spacing:0px;}
+    _::-webkit-full-page-media, _:future, :root * { letter-spacing: -0.05rem;}
+    _::-webkit-full-page-media, _:future, :root body {-webkit-text-size-adjust: 107%;}
+
+    ul, li {list-style: none;} 
+    img {width:100%;}
+    br {line-height: 0px;}
+    h1, h2 {font-weight: normal;}
+    
+.ultraLight {font-family: 'AppleSDGothicNeo-UltraLight', 'nanumBarunGothic-ultraLight';}
+.light {font-family: 'AppleSDGothicNeo-Light', 'nanumBarunGothic-light';}
+strong,b,.bold {font-family: 'AppleSDGothicNeo-Bold', 'nanumBarunGothic-bold'; font-weight: normal}
+
+.wrap {padding-bottom: 50px; position: relative;background-position:right 51px; background-repeat: no-repeat;}
+.wrap > * {width: 91%; margin: 0 auto;}
+.wrap.hasBanner {padding-top: 116px;}
+
+section.card {background: #fff; border-radius: 10px; margin-top: 20px; padding: 18px 0 8px;box-shadow: 0px 10px 20px rgba(0,0,0,0.2); position: relative;animation:cardTouchOut ease-out 0.2s forwards;}
+section.card.touch {animation:cardTouch ease-out 0.2s forwards;}
+section.card a.link {position: absolute; top:0px; left:0px; right:0px; bottom:0px; z-index: 10;}
+section.card a.link {z-index: 1009;}
+section.card h1 {color:#666666; font-size: 1.6rem; font-weight: normal; margin:0 15px;position: relative; }

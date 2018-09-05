@@ -24,6 +24,30 @@ section.card a.link {position: absolute; top:0px; left:0px; right:0px; bottom:0p
 section.card a.link {z-index: 1009;}
 section.card h1 {color:#666666; font-size: 1.6rem; font-weight: normal; margin:0 15px;position: relative; }
 
+svg rect.grade5 {fill: url(#mainGradient_grade5);}
+svg rect.grade4 {fill: url(#mainGradient_grade4);}
+svg rect.grade3 {fill: url(#mainGradient_grade3);}
+svg rect.grade2 {fill: url(#mainGradient_grade2);}
+svg rect.grade1 {fill: url(#mainGradient_grade1);}
+svg rect.ghost {fill: url(#mainGradient_ghost);}
+svg rect.zero {fill: #aaacb3;}
+svg rect.default {fill: #f7f7f7;}
+
+.stop-left-ghost {stop-color: #c5cad4;}
+.stop-right-ghost {stop-color: #d0d3db;}
+.stop-left-grade5 {stop-color: #21c6a0;}
+.stop-right-grade5 {stop-color: #3bd894;}
+.stop-left-grade4 {stop-color: #85d21a;}
+.stop-right-grade4 {stop-color: #b7e91f;}
+.stop-left-grade3 {stop-color: #e8ba02;}
+.stop-right-grade3 {stop-color: #f8d325;}
+.stop-left-grade2 {stop-color: #f0740f;}
+.stop-right-grade2 {stop-color: #ff9642;}
+.stop-left-grade1 {stop-color: #e9514e;}
+.stop-right-grade1 {stop-color: #fb6d6a;}
+.stop-left-gray {stop-color: #c5cad4;}
+.stop-right-gray {stop-color: #d0d3db;}
+
 .grade0_45deg {background: linear-gradient(#f5f5f5,#f5f5f5);}
 .grade1_45deg {background: linear-gradient(#fa5955,#ed2c28);}
 .grade2_45deg {background: linear-gradient(#ff9642,#f0740f);}

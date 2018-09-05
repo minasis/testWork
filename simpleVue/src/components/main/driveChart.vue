@@ -11,16 +11,16 @@ export default {
     data:function(){
         return{
             recentRecord:[{
-                date: "2017/12",
+                date: "2018/4",
+                score: "40"
+            }, {
+                date: "2018/5",
                 score: "70"
             }, {
-                date: "2018/1",
-                score: "90"
+                date: "2018/7",
+                score: "69"
             }, {
-                date: "2018/2",
-                score: "89"
-            }, {
-                date: "2018/3",
+                date: "2018/8",
                 score: "92"
             }],
             viewer:{
@@ -45,7 +45,7 @@ export default {
 					now[1] = 12;
 				}
 				var date = now[0] + "/" + now[1];
-				var index = scoreData.map(function(e) { return e.date; }).indexOf(date)
+                var index = scoreData.map(function(e) { return e.date; }).indexOf(date)                
 				if(index >= 0){
 					tempArr.unshift(scoreData[index])
 				}else{
@@ -55,7 +55,6 @@ export default {
 			}
 			this.recentRecord = tempArr;
         }
-        console.log(this.recentRecord)
     },
     mounted(){
         var obj = this;        
@@ -98,6 +97,9 @@ export default {
         chartDraw: function(){
             var obj = this;
             var scoreSvg = d3.select(obj.$el.children[1])
+            var svgDefs = scoreSvg.append('defs');
+
+            this.setGradiunt(svgDefs);
 
             var bars = scoreSvg.selectAll("rect")
                                 .remove()
@@ -215,6 +217,71 @@ export default {
                 .attr("height", function(d){
                     return obj.scale.y(100)
                 });
+        },
+        setGradiunt: function(svgDefs){
+            var mainGradient_ghost = svgDefs.append('linearGradient').attr('id', 'mainGradient_ghost').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+            var mainGradient_grade5 = svgDefs.append('linearGradient').attr('id', 'mainGradient_grade5').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+            var mainGradient_grade4 = svgDefs.append('linearGradient').attr('id', 'mainGradient_grade4').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+            var mainGradient_grade3 = svgDefs.append('linearGradient').attr('id', 'mainGradient_grade3').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+            var mainGradient_grade2 = svgDefs.append('linearGradient').attr('id', 'mainGradient_grade2').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+            var mainGradient_grade1 = svgDefs.append('linearGradient').attr('id', 'mainGradient_grade1').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+            var mainGradient_gray = svgDefs.append('linearGradient').attr('id', 'mainGradient_gray').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");
+
+            mainGradient_ghost.append('stop')
+                .attr('class', 'stop-left-ghost')
+                .attr('offset', '0');
+
+            mainGradient_ghost.append('stop')
+                .attr('class', 'stop-right-ghost')
+                .attr('offset', '1');
+
+            mainGradient_grade5.append('stop')
+                .attr('class', 'stop-left-grade5')
+                .attr('offset', '0');
+
+            mainGradient_grade5.append('stop')
+                .attr('class', 'stop-right-grade5')
+                .attr('offset', '1');
+
+            mainGradient_grade4.append('stop')
+                .attr('class', 'stop-left-grade4')
+                .attr('offset', '0');
+
+            mainGradient_grade4.append('stop')
+                .attr('class', 'stop-right-grade4')
+                .attr('offset', '1');
+
+            mainGradient_grade3.append('stop')
+                .attr('class', 'stop-left-grade3')
+                .attr('offset', '0');
+
+            mainGradient_grade3.append('stop')
+                .attr('class', 'stop-right-grade3')
+                .attr('offset', '1');
+
+            mainGradient_grade2.append('stop')
+                .attr('class', 'stop-left-grade2')
+                .attr('offset', '0');
+
+            mainGradient_grade2.append('stop')
+                .attr('class', 'stop-right-grade2')
+                .attr('offset', '1');
+
+            mainGradient_grade1.append('stop')
+                .attr('class', 'stop-left-grade1')
+                .attr('offset', '0');
+
+            mainGradient_grade1.append('stop')
+                .attr('class', 'stop-right-grade1')
+                .attr('offset', '1');
+
+            mainGradient_gray.append('stop')
+                .attr('class', 'stop-left-gray')
+                .attr('offset', '0');
+
+            mainGradient_gray.append('stop')
+                .attr('class', 'stop-right-gray')
+                .attr('offset', '1');	
         }
     }
 }

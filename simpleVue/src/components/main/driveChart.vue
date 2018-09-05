@@ -33,6 +33,30 @@ export default {
             }
         }
     },
+    created(){
+        var scoreData = this.recentRecord;
+        if(scoreData.length < 5){
+            var tempArr = new Array();
+			for (var i = 0; i < 5; i++) {
+				var now = new Date();
+				now = [now.getFullYear(), (now.getMonth() + 1) - i]
+				if(now[1] == 0){
+					now[0] -= 1;
+					now[1] = 12;
+				}
+				var date = now[0] + "/" + now[1];
+				var index = scoreData.map(function(e) { return e.date; }).indexOf(date)
+				if(index >= 0){
+					tempArr.unshift(scoreData[index])
+				}else{
+					var tempObj = {"date":date,"score":0};
+					tempArr.unshift(tempObj)
+				}
+			}
+			this.recentRecord = tempArr;
+        }
+        console.log(this.recentRecord)
+    },
     mounted(){
         var obj = this;        
         obj.viewer.width = obj.$el.children[1].clientWidth;

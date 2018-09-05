@@ -1,7 +1,7 @@
 <template>
-    <a href="javascript:;" class="banner light"  :style="{height:styles[0].height, color:styles[0].color, background: 'url(' + styles[0].bgImg + ') 0 0 repeat-x', backgroundSize:'1px 100%'}">
+    <a href="javascript:;" class="banner light"  :style="{height:styles.height, color:styles.color, background: 'url(' + styles.bgImg + ') 0 0 repeat-x', backgroundSize:'1px 100%'}">
         <span v-html="bannerTxt"></span>
-        <span class="bannerBg" :style="{backgroundImage:'url(' + styles[0].bannerBg + ')', backgroundSize:'auto 100%'}"></span>
+        <span class="bannerBg" :style="{backgroundImage:'url(' + styles.bannerBg + ')', backgroundSize:'auto 100%'}"></span>
     </a>
 </template>
 
@@ -9,12 +9,12 @@
 export default {
     data:function(){
         return {
-            styles:[{
+            styles:{
                 height:"137px",
                 bgImg : "http://mdev.tmap.co.kr/static/drivingHabit/images/samples/banner4_1.jpg",
                 color:"#fff",
                 bannerBg : "http://mdev.tmap.co.kr/static/drivingHabit/images/samples/banner4.jpg?ver01"
-            }],
+            },
             bannerTxt : "어? 내가 어떻게 운전했지?<br><b>가장 궁금해하던 것을 보여드립니다!</b>"
         }
     }

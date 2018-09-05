@@ -23,3 +23,17 @@ section.card.touch {animation:cardTouch ease-out 0.2s forwards;}
 section.card a.link {position: absolute; top:0px; left:0px; right:0px; bottom:0px; z-index: 10;}
 section.card a.link {z-index: 1009;}
 section.card h1 {color:#666666; font-size: 1.6rem; font-weight: normal; margin:0 15px;position: relative; }
+
+.grade0_45deg {background: linear-gradient(#f5f5f5,#f5f5f5);}
+.grade1_45deg {background: linear-gradient(#fa5955,#ed2c28);}
+.grade2_45deg {background: linear-gradient(#ff9642,#f0740f);}
+.grade3_45deg {background: linear-gradient(#f8d325,#e8ba02);}
+.grade4_45deg {background: linear-gradient(#b7e91f,#85d21a);}
+.grade5_45deg {background: linear-gradient(#3bd894,#21c6a0);}
+
+.grade0_color {color: #e5e5e5}
+.grade1_color {color: #f65f5c}
+.grade2_color {color: #f78157}
+.grade3_color {color: #ebb535}
+.grade4_color {color: #99d91d}
+.grade5_color {color: #1dc89f}

@@ -12,6 +12,7 @@
 import headerCmp from './components/header.vue';
 import topbannerCmp from './components/main/topBanner.vue';
 import scoresCmp from './components/main/scores.vue';
+import driveChart from './components/main/driveChart.vue'
 
 export default {
   name: 'app',

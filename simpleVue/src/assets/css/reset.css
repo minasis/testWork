@@ -24,6 +24,7 @@ section.card a.link {position: absolute; top:0px; left:0px; right:0px; bottom:0p
 section.card a.link {z-index: 1009;}
 section.card h1 {color:#666666; font-size: 1.6rem; font-weight: normal; margin:0 15px;position: relative; }
 
+svg line {display:none;}
 svg rect.grade5 {fill: url(#mainGradient_grade5);}
 svg rect.grade4 {fill: url(#mainGradient_grade4);}
 svg rect.grade3 {fill: url(#mainGradient_grade3);}

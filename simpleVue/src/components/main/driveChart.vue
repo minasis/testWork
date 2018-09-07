@@ -59,7 +59,7 @@ export default {
     mounted(){
         var obj = this;        
         obj.viewer.width = obj.$el.children[1].clientWidth;
-        obj.viewer.height = obj.$el.children[1].clientHeight;
+        obj.viewer.height = obj.$el.children[1].clientHeight - 20;
         obj.scale.x = obj.getScaleX();
         obj.scale.y = obj.getScaleY();
         
@@ -100,7 +100,7 @@ export default {
             var svgDefs = scoreSvg.append('defs');
 
             this.setGradiunt(svgDefs);
-
+            console.log(obj.viewer.height)
             var bars = scoreSvg.selectAll("rect")
                                 .remove()
                                 .exit()
@@ -217,6 +217,60 @@ export default {
                 .attr("height", function(d){
                     return obj.scale.y(100)
                 });
+
+                var texts = scoreSvg.selectAll("text")
+                                 .remove()
+                                 .exit()
+                                 .data(obj.recentRecord)
+                        
+                texts.enter().append("text")
+                        .text(function(d){
+                            var tempType = switchType("score", d);
+
+                            if(tempType > 0){
+                                return	tempType
+                            }else{
+                                return ""
+                            }
+                        })
+                        .attr("class", function(d,i){
+                            if($(".recentPatturn .rightTitle").text() != "�쇰퀎 �먯닔" || 
+                                $(".recentPatturn").hasClass("firstUser")) {return "num";}
+                            return "num " + getGrade(d.score)
+                        })
+                        .attr("x", function(d, i){
+                            if(d.date.indexOf("/") < 0){return "";}
+                            var position = parseInt($("rect").eq(i).attr("x"));
+                            var textWidth = 12 - this.getBBox().width;
+                        
+                            position += (textWidth / 2);
+                            return position>0?position:0;
+                        })
+                        .attr("y", function(d){
+                            return obj.viewer.height - obj.scale.y(switchType("score", d)) - 5
+                        })
+
+                var prevMonth = 0;
+                scoreSvg.append("g")
+                        .call(d3.axisBottom(obj.scale.x).tickFormat(function(d, i){				
+                            //if(obj.recentRecord[i].score < 0){return "8��"}
+                            var time = new Date(d);				
+                            var month = time.getMonth();
+                            //delete time;
+                            
+                            if(i == 0 || prevMonth != month){
+                                prevMonth = month;
+                                month += 1
+                            }else{
+                                month = ""
+                            }
+                            
+                            return month + "월";
+                        }).tickSizeOuter(0))
+                        .attr("transform", "translate(0, " + (obj.viewer.height) + ")")
+                        .attr("class", "axis");
+
+                $(".axis text").attr("transform", "translate(0, -1)")
         },
         setGradiunt: function(svgDefs){
             var mainGradient_ghost = svgDefs.append('linearGradient').attr('id', 'mainGradient_ghost').attr("y2", "100%").attr("x1", "0").attr("x2","0").attr("y1","0");

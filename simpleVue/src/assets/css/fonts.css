@@ -3,10 +3,8 @@
     font-family: 'nanumBarunGothic-ultraLight';
     src: url('../fonts/NanumBarunGothicUltraLight-subset.eot');
     src: url('../fonts/NanumBarunGothicUltraLight-subset.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/NanumBarunGothicUltraLight-subset.woff') format('woff'),			 
-	url('../fonts/NanumBarunGothicUltraLight-subset.woff2') format('woff2'),         
-         url('../fonts/NanumBarunGothicUltraLight-subset.ttf') format('truetype'),
-         url('../fonts/NanumBarunGothicUltraLight-subset.svg#NanumBarunGothicUltraLight-subset') format('svg');
+		 url('../fonts/NanumBarunGothicUltraLight-subset.woff') format('woff'),
+         url('../fonts/NanumBarunGothicUltraLight-subset.ttf') format('truetype');
 }
 
 
@@ -14,26 +12,20 @@
 	font-family: 'nanumBarunGothic-light';
 	src: url('../fonts/NanumBarunGothicLight-subset.eot'); 
 	src: url('../fonts/NanumBarunGothicLight-subset.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/NanumBarunGothicLight-subset.woff') format('woff'),
-	url('../fonts/NanumBarunGothicLight-subset.woff2') format('woff2'),
-	url('../fonts/NanumBarunGothicLight-subset.ttf') format('truetype'),	
-	url('../fonts/NanumBarunGothicLight-subset.svg#NanumBarunGothicLight-subset') format('svg');
+		 url('../fonts/NanumBarunGothicLight-subset.woff') format('woff'),
+		 url('../fonts/NanumBarunGothicLight-subset.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'nanumBarunGothic-regular'; 
 	src: url('../fonts/NanumBarunGothic-subset.eot'); 
 	src: url('../fonts/NanumBarunGothic-subset.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/NanumBarunGothic-subset.woff') format('woff'),
-	url('../fonts/NanumBarunGothic-subset.woff2') format('woff2'),
-	url('../fonts/NanumBarunGothic-subset.ttf') format('truetype'),	
-	url('../fonts/NanumBarunGothic-subset.svg#NanumBarunGothic-subset') format('svg');
+		 url('../fonts/NanumBarunGothic-subset.woff') format('woff'),
+		 url('../fonts/NanumBarunGothic-subset.ttf') format('truetype');
 }
 @font-face {
     font-family: 'nanumBarunGothic-bold';
     src: url('../fonts/NanumBarunGothicBold-subset.eot');
 	src: url('../fonts/NanumBarunGothicBold-subset.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/NanumBarunGothicBold-subset.woff') format('woff'),
-         url('../fonts/NanumBarunGothicBold-subset.woff2') format('woff2'),
-         url('../fonts/NanumBarunGothicBold-subset.ttf') format('truetype'),
-         url('../fonts/NanumBarunGothicBold-subset.svg#NanumBarunGothicBold-subset') format('svg');
+         url('../fonts/NanumBarunGothicBold-subset.ttf') format('truetype');
 }

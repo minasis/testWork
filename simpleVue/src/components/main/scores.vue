@@ -140,10 +140,10 @@ export default {
     .totalScore li:first-child b:after {position:relative;bottom:2px;font-size:2.5rem; content:'점';font-family:'AppleSDGothicNeo-Regular', 'nanumBarunGothic-regular'; margin-left: 3px; }
     .totalScore li:first-child b.data:after {display: inline}
 
-    dt {width: 50px; height: 50px; border-radius: 100%; margin: 0 auto 13px; position: relative;}
-    dt:after {width: 44px; height: 44px; position: absolute; background: #fff; border-radius: 100%; left: 50%; top:50%; margin-top:-22px; margin-left: -22px; content:'';}
-    dt span {position: relative; z-index: 2; display: block; width: 100%; height: 100%; text-align: center; font-size: 1.4rem; display: flex; align-items:center; justify-content:center; padding-top: 2px;}
-    dd {font-size: 1.5rem; color: #1a1a1a; text-align: center;}
+    .totalScore dt {width: 50px; height: 50px; border-radius: 100%; margin: 0 auto 13px; position: relative;}
+    .totalScore dt:after {width: 44px; height: 44px; position: absolute; background: #fff; border-radius: 100%; left: 50%; top:50%; margin-top:-22px; margin-left: -22px; content:'';}
+    .totalScore dt span {position: relative; z-index: 2; display: block; width: 100%; height: 100%; text-align: center; font-size: 1.4rem; display: flex; align-items:center; justify-content:center; padding-top: 2px;}
+    .totalScore dd {font-size: 1.5rem; color: #1a1a1a; text-align: center;}
 
     .myPosition {height: 27px; border-radius: 17px; background: #f7f7f7; display: inline-block; margin-top: -1rem; width: 82px; text-align: center;font-size: 1.4rem; color:#666; line-height: 29px; }
     .myPosition .swiper-slide {text-align: center; font-size: 1.4rem; color:#666; line-height: 29px; padding:0 12px; height: 27px; white-space: nowrap}

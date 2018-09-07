@@ -18,5 +18,5 @@ export default {
     header .back {width:13px; height: 23px; background: url("http://mdev.tmap.co.kr/static/drivingHabit/images/common/backBtn.png") 0 0 no-repeat; left: 16px; top:13px; background-size: 100% auto;}
     header .txt {position:static; white-space: nowrap}
     header .rightBtn {width:25px; height:25px; right:15px;top:12px;}
-    header .settingBtn{background:url("http://mdev.tmap.co.kr/static/drivingHabit/images/common/settingBtn.png") 0 0 no-repeat; background-size:100% auto;}
+    header .settingBtn{background:url("../assets/images/settingBtn.png") 0 0 no-repeat; background-size:100% auto;}
 </style>
